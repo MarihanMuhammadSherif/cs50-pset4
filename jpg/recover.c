@@ -43,7 +43,7 @@ int main(void)
     // until end of file is reached
     while (!feof(file))
     {
-       
+       fread(buffer,512,1,file);
         // check first couple of sequence of the jpg
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] == 0xe0 || buffer[3] == 0xe1))
         {
